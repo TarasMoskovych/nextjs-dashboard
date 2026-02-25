@@ -1,5 +1,6 @@
 import postgres from 'postgres';
 import {
+  CardData,
   CustomerField,
   CustomersTableType,
   InvoiceForm,
@@ -50,7 +51,7 @@ export async function fetchLatestInvoices() {
   }
 }
 
-export async function fetchCardData() {
+export async function fetchCardData(): Promise<CardData> {
   try {
     // You can probably combine these into a single SQL query
     // However, we are intentionally splitting them to demonstrate
